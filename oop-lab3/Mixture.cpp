@@ -64,6 +64,8 @@ void Mixture::save_to_file(ofstream& file)
 
 	file << p << endl << HB1->get_v() << endl << HB1->get_scale() << endl << HB1->get_shift() << endl << HB2->get_v() << endl << HB2->get_scale() << endl << HB2->get_shift();
 	file.close();
+
+	cout << endl << "Параметры распределения сохранены в файл " + filename << endl;
 }
 
 double Mixture::f(const double x) const

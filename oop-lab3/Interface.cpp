@@ -619,6 +619,9 @@ void step2_empirical_from_sequence()
 			file >> x;
 			x_s.push_back(x);
 		}
+
+		file.close();
+
 		try 
 		{
 			EM = new Empirical(x_s);
@@ -628,6 +631,7 @@ void step2_empirical_from_sequence()
 			cerr << e.what() << endl << endl;
 			break;
 		}
+
 		cout << endl << endl;
 		step3_empirical(EM);
 		break;
