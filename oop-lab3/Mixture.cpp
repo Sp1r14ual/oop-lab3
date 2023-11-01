@@ -7,7 +7,7 @@ Mixture::Mixture() : p(0.5)
 }
 
 Mixture::Mixture(Primary* _HB1, Primary* _HB2, double _p) :
-	HB1(_HB1), HB2(_HB2), p(_p > 0 and _p < 1 ? _p : throw invalid_argument("Îøèáêà: îäèí ïàğàìåòğî íåêîğğåêòåí") ) {}
+	HB1(_HB1), HB2(_HB2), p(_p > 0 and _p < 1 ? _p : throw invalid_argument("Îøèáêà: îäèí èëè íåñêîëüêî ïàğàìåòğîâ íåêîğğåêòíû") ) {}
 
 Mixture::Mixture(ifstream& file)
 {

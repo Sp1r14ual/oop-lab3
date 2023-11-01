@@ -697,7 +697,14 @@ void step2_empirical()
 		break;
 
 	case '6':
-		EM = new Empirical(file);
+		try {
+			EM = new Empirical(file);
+		}
+		catch(exception e)
+		{
+			cerr << e.what() << endl << endl;
+			break;
+		}
 		step3_empirical(EM);
 		break;
 
